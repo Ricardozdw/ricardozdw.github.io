@@ -1,6 +1,6 @@
 # 张达玮的个人网站
 
-参考 [IconMoon](https://iconmoon.com/) 的视觉和内容组织：白底三段式介绍、轻量固定导航、各有配色的大幅项目卡片、思考分享与双栏个人资料。内容保留张达玮的身份与概念探索，配图为原创 AI 生成素材。原生 HTML、CSS、JavaScript，无需安装依赖。
+参考 [IconMoon](https://iconmoon.com/) 的视觉和内容组织：白底三段式介绍、轻量固定导航、各有配色的大幅项目卡片、思考分享与双栏个人资料。作品区展示张达玮的真实 GitHub 项目，采用项目页面截图和仓库版式预览。原生 HTML、CSS、JavaScript，无需安装依赖。
 
 **访问网站：[ricardozdw.github.io](https://ricardozdw.github.io/)**
 
@@ -30,13 +30,14 @@ GitHub Actions 会自动发布 `dist/`。可在仓库的 Actions 页面查看部
 
 - `dist/profile.js`：姓名、职业、简介、关于我、邮箱。填入邮箱后自动显示邮件联系按钮。
 - `dist/index.html`：三段式介绍、大幅项目卡片、分享与个人资料。
-- `dist/script.js`：概念项目详情与交互。
+- `dist/script.js`：思考片段详情、导航与复制链接交互。
 - `dist/style.css`：色彩、排版、响应式布局。
-- `dist/assets/flow-icon.png`、`dist/assets/knowledge-icon.png`：内置 imagegen 生成的透明项目配图。旧版素材保留但不加载。
+- `dist/assets/projects/`：当前三项 GitHub 项目的真实截图和版式预览。旧版 AI 配图保留但不加载。
 - `dist/fonts/`：当前使用开源 Fira Sans，字体与 OFL 许可证本地托管；旧版字体保留但不加载。
 - `docs/asset-prompts.md`：配图的生成方式与完整提示词。
 - `docs/design-reference.md`：参考站观察与本次适配说明。
+- `docs/project-sources.md`：项目说明、实际使用范围及预览图片来源。
 
-作品区当前是明确标注的概念展示，不代表真实项目履历。发布个人作品前，请替换相应卡片和详情。
+作品按顺序为 [知汇台](https://github.com/Ricardozdw/zhihuitai)、[小红书成稿工坊](https://github.com/Ricardozdw/xiaohongshu-content-studio)、[AI 产品拆解 Skill](https://github.com/Ricardozdw/ai-product-teardown)。知汇台在线页面为 Mock 前端演示；成稿工坊为安装型 Skill，网页提供介绍与预览；拆解 Skill 附公开 HTML 示例报告。
 
 此前 Sites 私人预览的托管身份保存在 `.openai/hosting.json`，与 GitHub Pages 的公开网站独立。
