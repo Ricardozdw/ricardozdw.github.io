@@ -18,6 +18,8 @@ git push origin main
 
 GitHub Actions 会自动发布 `dist/`。可在仓库的 Actions 页面查看部署状态，也可手动运行 `Deploy personal website to GitHub Pages` 工作流。
 
+部署时会自动为 CSS、JavaScript 和 favicon 添加提交版本号，避免浏览器复用旧版本资源。
+
 仓库 Settings → Pages 的发布来源应为 **GitHub Actions**。
 
 ## 本地预览
