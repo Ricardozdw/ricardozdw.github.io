@@ -5,6 +5,12 @@
 // { title: '文章标题', url: '文章链接', date: 'YYYY-MM-DD', category: '公众号',
 //   readMinutes: 8, excerpt: '文章摘要', cover: './assets/articles/cover.jpg' }
 window.ARTICLES = [
+  { title: '为什么所有的 AI 办公助手，最终都会沦为老板的监工？', url: 'https://mp.weixin.qq.com/s/YGOufpBK8kATFFI1NTwIdg',
+    date: '2026-10-31', category: '公众号', readMinutes: 8, cover: './assets/articles/ai-office-assistant.jpg',
+    excerpt: '从钉钉 ONE 的复盘出发，拆解 To B 协同产品“买单的人不用、用的人不买单”的结构性矛盾，以及 AI 秘书被异化的原因。' },
+  { title: '业务自己会 Vibe Coding 了，公司还要 AI PM 干嘛？', url: 'https://mp.weixin.qq.com/s/rBD6p4Be6duAFxIVi_Tyqw',
+    date: '2026-10-30', category: '公众号', readMinutes: 8, cover: './assets/articles/vibe-coding-ai-pm.jpg',
+    excerpt: '业务能自己搓出小工具，却搞不定安全合规、版本退化和算力成本。AI PM 的新位置，是成为系统的质检者与守门人。' },
   { title: '别再靠“感觉”测 AI 了：像美团一样，给你的 Agent 建一套“错题本”', url: 'https://mp.weixin.qq.com/s/X_QrGJyYmMp7oTheN4Dj1g',
     date: '2026-10-29', category: '公众号', readMinutes: 8, cover: './assets/articles/agent-eval-casebook.jpg',
     excerpt: '借美团《Agent 评测白皮书》，讲清二元打勾清单、端到端与过程两套评测，以及黄金集、错题集如何为每次改版守住底线。' },
@@ -14,10 +20,4 @@ window.ARTICLES = [
   { title: '为了让 AI 答对 85%，我们先教会了它怎么说“不知道”', url: 'https://mp.weixin.qq.com/s/5t8uoDT1xrs4VgoM1PvORQ',
     date: '2026-10-24', category: '公众号', readMinutes: 9, cover: './assets/articles/rag-says-i-dont-know.jpg',
     excerpt: '一次企业知识库问答翻车后的复盘：换模型、调切片都救不了，真正有效的是拆解问题、结构化文档，并让系统学会拒答。' },
-  { title: '业务自己会 Vibe Coding 了，公司还要 AI PM 干嘛？', url: 'https://mp.weixin.qq.com/s/rBD6p4Be6duAFxIVi_Tyqw',
-    date: '2026-10-30', category: '公众号', readMinutes: 8, cover: './assets/articles/vibe-coding-ai-pm.jpg',
-    excerpt: '业务能自己搓出小工具，却搞不定安全合规、版本退化和算力成本。AI PM 的新位置，是成为系统的质检者与守门人。' },
-  { title: '为什么所有的 AI 办公助手，最终都会沦为老板的监工？', url: 'https://mp.weixin.qq.com/s/YGOufpBK8kATFFI1NTwIdg',
-    date: '2026-10-31', category: '公众号', readMinutes: 8, cover: './assets/articles/ai-office-assistant.jpg',
-    excerpt: '从钉钉 ONE 的复盘出发，拆解 To B 协同产品“买单的人不用、用的人不买单”的结构性矛盾，以及 AI 秘书被异化的原因。' },
 ];
