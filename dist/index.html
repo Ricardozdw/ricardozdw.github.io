@@ -4,43 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="张达玮，AI 产品经理。关于 AI、产品与体验的探索。">
+  <meta name="description" content="张达玮，AI 产品经理。探索用户、技术与体验之间的更多可能。">
   <title>张达玮 — AI 产品经理</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./fonts/ArchivoBlack-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./fonts/IBMPlexMono-Medium.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="./style.css">
   <script src="./profile.js" defer></script>
   <script src="./script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳至正文</a>
-  <header class="masthead" id="top">
-    <div class="identity"><h1 data-name>张达玮</h1><p data-role>AI 产品经理</p></div>
-    <p class="introduction" data-intro>在用户需求与技术可能之间，寻找值得创造的答案。</p>
-    <div class="information-link"><a class="action" href="#information">个人信息</a></div>
+  <header class="site-header">
+    <a class="brand label" href="#top" aria-label="张达玮 首页">[ZHANG DAWEI]</a>
+    <nav class="nav label" aria-label="主导航"><a href="#work">WORK <span aria-hidden="true">⊙</span></a><a href="#about">ABOUT</a><a href="#contact">REACH OUT</a></nav>
+    <div class="time-badge label"><span>UTC+8</span><time id="local-time" aria-label="UTC+8 当前时间">--:--</time></div>
   </header>
   <main id="main">
-    <article class="project" id="workflow" aria-labelledby="workflow-title">
-      <header class="project-label"><p class="project-kind">产品概念 / 01</p><h2 id="workflow-title">AI 工作流实验室</h2><p>让重复的工作，拥有更聪明的解法。</p></header>
-      <button class="project-image" data-project="workflow" aria-label="阅读 AI 工作流实验室的概念说明"><img src="./assets/workspace.jpg" alt="明亮工作室中的银色笔记本电脑，屏幕上是一套简洁的工作流界面；AI 生成场景图" width="1536" height="1024" fetchpriority="high"></button>
-      <footer class="project-footer"><div><p>概念展示</p><p>产品定义、任务编排</p></div><button class="plain-button" data-project="workflow">阅读项目说明</button><p class="image-credit">AI 生成场景图</p></footer>
-    </article>
-    <div class="section-band" aria-hidden="true"></div>
-    <article class="project" id="conversation" aria-labelledby="conversation-title">
-      <header class="project-label"><p class="project-kind">体验设计 / 02</p><h2 id="conversation-title">对话之外的 AI 体验</h2><p>探索更自然、更可控的人机协作。</p></header>
-      <button class="project-image" data-project="conversation" aria-label="阅读 对话之外的 AI 体验的概念说明"><img src="./assets/interface.jpg" alt="手在平板电脑上操作简洁的对话界面；AI 生成场景图" width="1536" height="1024" loading="lazy" decoding="async"></button>
-      <footer class="project-footer"><div><p>概念展示</p><p>交互设计、人机协作</p></div><button class="plain-button" data-project="conversation">阅读项目说明</button><p class="image-credit">AI 生成场景图</p></footer>
-    </article>
-    <div class="section-band plinth" aria-hidden="true"></div>
-    <article class="project" id="knowledge" aria-labelledby="knowledge-title">
-      <header class="project-label"><p class="project-kind">个人系统 / 03</p><h2 id="knowledge-title">连接知识的个人系统</h2><p>让零散的信息，成为生长的知识。</p></header>
-      <button class="project-image" data-project="knowledge" aria-label="阅读 连接知识的个人系统的概念说明"><img src="./assets/notes.jpg" alt="桌面上的笔记本、索引卡片与思考草图；AI 生成场景图" width="1536" height="1024" loading="lazy" decoding="async"></button>
-      <footer class="project-footer"><div><p>概念展示</p><p>知识管理、信息组织</p></div><button class="plain-button" data-project="knowledge">阅读项目说明</button><p class="image-credit">AI 生成场景图</p></footer>
-    </article>
-    <section class="notes" aria-labelledby="notes-title"><h2 id="notes-title">思考片段</h2><div class="notes-index"><button class="note-link" data-note="problem"><span>先找到值得解决的问题</span><span>关于产品</span></button><button class="note-link" data-note="prototype"><span>把想法放进真实的场景</span><span>关于验证</span></button><button class="note-link" data-note="experience"><span>让技术安静地发挥作用</span><span>关于体验</span></button></div></section>
-    <section class="information" id="information" aria-labelledby="information-title"><h2 id="information-title">个人信息</h2><div class="about-copy"><p><span data-name>张达玮</span>，<span data-role>AI 产品经理</span>。</p><p data-about>我关注 AI 如何成为真正有用的产品。从理解问题、定义体验，到原型验证，我希望把复杂的技术，转化为清晰、自然的使用体验。</p><p>从问题出发，在构建中思考，让复杂回归简单。</p><div class="contact-links"><a href="https://github.com/Ricardozdw" target="_blank" rel="noopener noreferrer">GitHub</a><a class="email-link" hidden>邮件联系</a><button class="copy-link plain-button">复制网站链接</button></div><p class="content-note">页面中的项目为概念展示，摄影为 AI 生成的场景配图。</p></div></section>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-layout">
+        <div class="hero-copy"><p class="label hero-eyebrow">[AI PRODUCT MANAGER]</p><h1 id="hero-title" class="display">THINK.<br>BUILD.<br>MAKE IT<br>MATTER.</h1><p class="hero-identity"><span data-name>张达玮</span> / <span data-role>AI 产品经理</span></p><p class="hero-intro" data-intro>在用户需求与技术可能之间，寻找值得创造的答案。</p></div>
+        <figure class="sculpture"><img src="./assets/z-sculpture.png" alt="光泽黑色的抽象 Z 字母雕塑" width="1203" height="1307" fetchpriority="high"><figcaption class="label">[Z] — A WORK IN PROGRESS</figcaption></figure>
+        <div class="hero-aside"><div class="hero-credits label"><p>[PERSONAL EXPLORATIONS]</p><p>PRODUCT STRATEGY<br>AI EXPERIENCE<br>PROTOTYPING</p></div><button class="focus-card" data-note="problem" aria-label="阅读关于产品的思考"><span class="focus-art" aria-hidden="true"><span class="focus-orbit"></span><span class="focus-word display">WHY?</span><span class="focus-corner label">01</span></span><span class="focus-footer label">[CURRENT FOCUS]<span>READ ↗</span></span></button></div>
+      </div>
+      <div class="hero-bottom label"><p>HUMAN NEEDS. TECHNICAL POSSIBILITIES.</p><a href="#work">SCROLL ↓</a><p>[PERSONAL INDEX / <span data-year>2026</span>]</p></div>
+    </section>
+    <section class="work section" id="work" aria-labelledby="work-title">
+      <header class="section-header"><div><p class="label section-index">[01 — EXPLORATIONS]</p><h2 class="display" id="work-title">FEATURED WORK</h2></div><p class="section-description">关于 AI、产品与体验的探索。<br><span class="label">[CONCEPT STUDIES — 01/03]</span></p></header>
+      <div class="projects-grid">
+        <article class="project-card"><header class="project-heading"><h3 class="label">WORKFLOW LAB</h3><span class="label">[01]</span></header>
+          <button class="project-visual workflow-visual" data-project="workflow" aria-label="查看 AI 工作流实验室概念说明"><span class="mock-app workflow-app" aria-hidden="true"><span class="mock-top"><span class="mock-brand">wf / workspace</span><span>Untitled workflow <span class="mock-outline">Preview</span></span></span><span class="app-body"><span class="mock-sidebar"><span class="sidebar-title">WORKSPACE</span><span class="sidebar-active">Your workflows</span><span>Templates</span><span>Activity</span><span class="sidebar-bottom">Settings</span></span><span class="flow-canvas"><span class="canvas-heading">A clearer way to get things done.</span><svg class="flow-lines" viewBox="0 0 400 230" preserveAspectRatio="none"><path d="M90 115H155M245 115H310M200 52V80M200 150V188"/></svg><span class="flow-step step-input"><i>01</i><strong>Input</strong><small>Start with an idea</small></span><span class="flow-step step-context"><i>02</i><strong>Context</strong></span><span class="flow-step step-ai"><i>✳</i><strong>AI model</strong><small>Make the connection</small></span><span class="flow-step step-output"><i>04</i><strong>Output</strong><small>Review the result</small></span><span class="flow-step step-review"><i>03</i><strong>Human review</strong></span><span class="canvas-status">DRAFT / READY TO EXPLORE</span></span></span></span></button>
+          <footer class="project-caption"><div><p>AI 工作流实验室</p><p class="label">[PRODUCT CONCEPT] [AI AGENT]</p></div><span class="label">[概念展示]</span></footer>
+        </article>
+        <article class="project-card"><header class="project-heading"><h3 class="label">BEYOND THE CHAT</h3><span class="label">[02]</span></header>
+          <button class="project-visual chat-visual" data-project="conversation" aria-label="查看 对话之外的 AI 体验概念说明"><span class="mock-app chat-app" aria-hidden="true"><span class="mock-top"><span class="mock-brand">dialogue /</span><span>New conversation <span>＋</span></span></span><span class="chat-content"><span class="chat-small">A SPACE FOR YOUR NEXT IDEA</span><strong>What are we building today?</strong><span class="chat-question">Turn this idea into a plan.</span><span class="chat-reply"><span class="reply-symbol">✳</span><span>Let's give it a little structure.<span class="response-steps"><span><i>01</i>Understand</span><span><i>02</i>Explore</span><span><i>03</i>Build</span></span></span></span><span class="chat-input">Ask, explore, or make something.<span>↑</span></span></span></span></button>
+          <footer class="project-caption"><div><p>对话之外的 AI 体验</p><p class="label">[EXPERIENCE DESIGN] [HUMAN × AI]</p></div><span class="label">[概念展示]</span></footer>
+        </article>
+        <article class="project-card project-wide"><header class="project-heading"><h3 class="label">A CONNECTED MIND</h3><span class="label">[03]</span></header>
+          <button class="project-visual knowledge-visual" data-project="knowledge" aria-label="查看 连接知识的个人系统概念说明"><span class="mock-app knowledge-app" aria-hidden="true"><span class="mock-top"><span class="mock-brand">index / a connected mind</span><span>Notes <span class="mock-outline">Graph view</span></span></span><span class="knowledge-body"><span class="knowledge-list"><span class="sidebar-title">YOUR PERSONAL INDEX</span><span class="note-preview"><small>IDEA / 001</small><strong>Start with a question.</strong><span>Good notes help ideas find each other.</span></span><span class="note-preview"><small>READING / 002</small><strong>A little more context.</strong></span><span class="note-preview"><small>BUILD / 003</small><strong>Something worth trying.</strong></span></span><span class="knowledge-map"><svg viewBox="0 0 560 260"><g fill="none" stroke="#999" stroke-width="1"><path d="M275 125 130 54M275 125 445 55M275 125 150 220M275 125 449 210M130 54 48 155M150 220 48 155M445 55 510 138M275 125 300 20"/></g><g fill="#fff" stroke="#aaa"><circle cx="130" cy="54" r="25"/><circle cx="445" cy="55" r="20"/><circle cx="150" cy="220" r="18"/><circle cx="449" cy="210" r="29"/><circle cx="48" cy="155" r="8"/><circle cx="510" cy="138" r="8"/><circle cx="300" cy="20" r="7"/></g><circle cx="275" cy="125" r="40" fill="#080707"/><g font-family="monospace" text-anchor="middle" font-size="11" fill="#080707"><text x="130" y="58">READ</text><text x="445" y="59">NOTE</text><text x="150" y="224">IDEA</text><text x="449" y="214">BUILD</text></g><text x="275" y="132" text-anchor="middle" font-family="monospace" font-size="22" fill="#fff">YOU</text></svg><span class="map-label">CONNECT THE DOTS. FIND SOMETHING NEW.</span></span></span></span></button>
+          <footer class="project-caption"><div><p>连接知识的个人系统</p><p class="label">[PERSONAL SYSTEM] [KNOWLEDGE DESIGN]</p></div><span class="label">[概念展示]</span></footer>
+        </article>
+      </div>
+    </section>
+    <section class="about dark section" id="about" aria-labelledby="about-title"><header class="section-header"><p class="label section-index">[02 — A LITTLE CONTEXT]</p><p class="label">[ZHANG DAWEI / AI PRODUCT MANAGER]</p></header><div class="about-grid"><h2 class="display" id="about-title">GOOD PRODUCTS<br>START WITH<br>BETTER<br>QUESTIONS.</h2><div class="about-body"><p class="about-name"><span data-name>张达玮</span>，<span data-role>AI 产品经理</span>。</p><p data-about>我关注 AI 如何成为真正有用的产品。从理解问题、定义体验，到原型验证，我希望把复杂的技术，转化为清晰、自然的使用体验。</p><div class="principles"><div><span class="label">[01]</span><p>从问题出发</p><span class="principle-detail">理解用户与真实场景。</span></div><div><span class="label">[02]</span><p>在构建中思考</p><span class="principle-detail">让原型带来具体的反馈。</span></div><div><span class="label">[03]</span><p>让复杂回归简单</p><span class="principle-detail">让技术服务于人的目标。</span></div></div></div></div></section>
+    <section class="notes section" aria-labelledby="notes-title"><header class="section-header"><div><p class="label section-index">[03 — NOTES & OBSERVATIONS]</p><h2 class="display" id="notes-title">THINKING OUT LOUD</h2></div><p class="section-description">一些持续思考的问题。</p></header><div class="notes-list"><button class="note-row" data-note="problem"><span class="label">[01 / PRODUCT]</span><span>先找到值得解决的问题</span><span class="note-arrow" aria-hidden="true">↗</span></button><button class="note-row" data-note="prototype"><span class="label">[02 / PROTOTYPING]</span><span>把想法放进真实的场景</span><span class="note-arrow" aria-hidden="true">↗</span></button><button class="note-row" data-note="experience"><span class="label">[03 / EXPERIENCE]</span><span>让技术安静地发挥作用</span><span class="note-arrow" aria-hidden="true">↗</span></button></div></section>
+    <section class="contact dark section" id="contact" aria-labelledby="contact-title"><p class="label section-index">[04 — REACH OUT]</p><div class="contact-grid"><div><h2 class="display" id="contact-title">LET'S MAKE<br>ROOM FOR<br>THE NEXT IDEA.</h2><p class="contact-intro">关于 AI、产品，<br>或一个有趣的新可能。</p></div><div class="contact-rows"><div class="contact-row"><span class="label">[SAY HELLO]</span><a class="pill label" href="https://github.com/Ricardozdw" target="_blank" rel="noopener noreferrer"><span class="pill-monogram" aria-hidden="true">Z</span>FIND ME ON GITHUB <span>↗</span></a></div><div class="contact-row email-row" hidden><span class="label">[EMAIL]</span><a class="email-link outline-action label"></a></div><div class="contact-row"><span class="label">[CONNECT]</span><a class="social-link label" href="https://github.com/Ricardozdw" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a class="social-link label" href="https://github.com/Ricardozdw/ricardozdw.github.io" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div><div class="contact-row"><span class="label">[THIS WEBSITE]</span><button class="copy-link outline-action label">COPY WEBSITE LINK <span aria-hidden="true">⧉</span></button></div></div></div><footer class="site-footer label"><p>© <span id="year">2026</span> <span data-name>张达玮</span></p><p>[CONCEPT WORK, REAL CURIOSITY]</p><a href="#top">BACK TO TOP ↑</a></footer></section>
   </main>
-  <footer class="site-footer"><p>© <span id="year">2026</span> <span data-name>张达玮</span></p><a href="https://github.com/Ricardozdw/ricardozdw.github.io" target="_blank" rel="noopener noreferrer">网站源码</a><a href="#top">回到顶部</a></footer>
-  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><p id="dialog-category"></p><button class="close-dialog plain-button" aria-label="关闭详情">关闭</button></div><div class="dialog-content"><h2 id="dialog-title"></h2><p id="dialog-description"></p><div id="dialog-details"></div><p id="dialog-disclaimer"></p></div></dialog>
-  <div class="toast" role="status" aria-live="polite"></div>
+  <a class="floating-contact pill label" href="#contact"><span class="pill-monogram" aria-hidden="true">Z</span>LET'S TALK <span aria-hidden="true">↗</span></a>
+  <span class="edge-label label" aria-hidden="true">[PRODUCT × AI × EXPERIENCE]</span>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><p id="dialog-category" class="label"></p><button class="close-dialog outline-action label" aria-label="关闭详情">CLOSE ×</button></div><div class="dialog-content"><h2 id="dialog-title"></h2><p id="dialog-description"></p><div id="dialog-details"></div><p id="dialog-disclaimer" class="label"></p></div></dialog>
+  <div class="toast label" role="status" aria-live="polite"></div>
 </body>
 </html>

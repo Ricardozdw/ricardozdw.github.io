@@ -1,4 +1,10 @@
-# 场景配图
+# 视觉资产
+
+## 当前版本：`dist/assets/z-sculpture.png`
+
+使用内置 imagegen 工具生成，保留透明背景。作品区界面预览由 HTML、CSS、SVG 构建；下方三张旧版场景照片已不在页面加载。
+
+Use case: product-mockup. Asset type: transparent-background signature sculptural monogram for an avant-garde brutalist editorial portfolio. Primary request: a single glossy obsidian black abstract capital Z sculpture, a beautiful custom typographic object with wide compact proportions and a strong diagonal crossbar, unmistakably a Z letterform yet architecturally sculptural. Thick soft bevels and smoothly rounded outer edges on otherwise geometric bold solid strokes; black polished ceramic or obsidian glass material with crisp subtle white studio highlights and rich reflective black faces. Three-quarter perspective rotated slightly around vertical axis so depth is visible. The sculptural letter is upright, isolated, perfectly centered, fully visible with generous transparent margins; no base, no shadow on any ground plane. High-end industrial product rendering, editorial design art direction. Monochrome black with white specular highlights only. The outer silhouette and internal negative spaces must both have transparent background. No text other than the sculptural letter itself, no logos, no other objects, no background, no grey backdrop, no colorful light, no glow, no particle effects, no computer keyboard, no floating UI. Transparent PNG, large portrait composition suitable for a hero image.
 
 使用内置 imagegen 工具生成；照片用于概念展示，不代表已交付的产品或真实个人工作环境。原图保留在生成工具的默认目录，网站采用经 sips 转换的 JPEG 版本。
 

@@ -6,9 +6,11 @@ if (profile.name && profile.role) document.title = `${profile.name} — ${profil
 if (profile.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email)) {
   const email = document.querySelector('.email-link');
   email.href = `mailto:${encodeURIComponent(profile.email)}`;
-  email.hidden = false;
+  email.textContent = profile.email;
+  document.querySelector('.email-row').hidden = false;
 }
 document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 
 const explorations = {
   workflow: {
@@ -59,7 +61,7 @@ function openDetail(item, isProject) {
   });
   const disclaimer = document.querySelector('#dialog-disclaimer');
   disclaimer.hidden = !isProject;
-  disclaimer.textContent = isProject ? '概念展示，非实际交付项目或个人履历。场景配图由 AI 生成。' : '';
+  disclaimer.textContent = isProject ? '概念展示，非实际交付项目或个人履历。界面为示意性原型。' : '';
   dialog.showModal();
   dialog.scrollTop = 0;
 }
@@ -87,3 +89,32 @@ document.querySelector('.copy-link').addEventListener('click', async () => {
     notify('请从浏览器地址栏复制网站链接。');
   }
 });
+
+const timeFormatter = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit', hour12: false,
+});
+function updateClock() {
+  const now = new Date();
+  const clock = document.querySelector('#local-time');
+  clock.textContent = timeFormatter.format(now);
+  clock.dateTime = now.toISOString();
+}
+updateClock();
+setInterval(updateClock, 10000);
+
+const siteHeader = document.querySelector('.site-header');
+const darkSections = [...document.querySelectorAll('section.dark')];
+let headerFrame;
+function updateHeaderTheme() {
+  cancelAnimationFrame(headerFrame);
+  headerFrame = requestAnimationFrame(() => {
+    const edge = siteHeader.getBoundingClientRect().bottom;
+    siteHeader.classList.toggle('on-dark', darkSections.some(section => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= edge && rect.bottom > edge;
+    }));
+  });
+}
+window.addEventListener('scroll', updateHeaderTheme, { passive: true });
+window.addEventListener('resize', updateHeaderTheme);
+updateHeaderTheme();
