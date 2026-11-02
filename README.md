@@ -29,7 +29,7 @@ GitHub Actions 会自动发布 `dist/`。可在仓库的 Actions 页面查看部
 ## 更新内容
 
 - `dist/profile.js`：姓名、职业、简介、关于我、邮箱。填入邮箱后自动显示邮件联系按钮。
-- `dist/index.html`：三段式介绍、大幅项目卡片、分享与个人资料。
+- `dist/index.html`：三段式介绍、大幅项目卡片、分享与个人资料（含「常用工具」标签）。
 - `dist/assets/hero-pixel-typing.gif`：用户提供的透明像素人物动画，显示在首页介绍区；同名静态 PNG 用于“减少动态效果”偏好。
 - `dist/articles.js`：真实文章列表数据，目前为 5 篇公众号文章；封面存于 `dist/assets/articles/`（原封面居中、两侧用自身模糊图补成 16:9）。
 - `dist/script.js`：文章列表渲染、展开全部文章、导航与复制链接交互。
