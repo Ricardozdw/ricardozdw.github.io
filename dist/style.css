@@ -28,7 +28,11 @@ nav a:hover::after { width: 100%; }
 .site-header.is-scrolled { box-shadow: 0 8px 24px #00000008; }
 .site-header.is-scrolled .header-inner { border-bottom-color: transparent; }
 .site-header.is-scrolled .brand-caption { opacity: 1; transform: translateY(0); }
-.hero { padding: 92px var(--page) 110px; }
+.hero { padding: 92px var(--page) 110px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 360px); align-items: center; gap: clamp(28px, 4vw, 64px); }
+.hero-copy { min-width: 0; }
+.hero-illustration { width: 100%; justify-self: end; }
+.hero-illustration picture, .hero-illustration img { display: block; width: 100%; }
+.hero-illustration img { height: auto; object-fit: contain; image-rendering: pixelated; }
 .hero-statement + .hero-statement { margin-top: 30px; }
 .hero h1, .hero h2 { font-size: 48px; font-weight: 700; line-height: 1.23; letter-spacing: -.035em; color: #484848; }
 .hero p { margin-top: 8px; font-size: 20px; font-weight: 300; line-height: 1.45; color: #8a8a8a; }
@@ -179,4 +183,7 @@ body:has(dialog[open]) { overflow: hidden; }
 @media (max-width: 900px) { .project-links { column-gap: 12px; } .source-link { font-size: 10px; } .project-scope { font-size: 9px; } .repository-art { gap: 13px; } .preview-bar { height: 23px; font-size: 7px; padding-inline: 8px; } .preview-bar > span:last-child { font-size: 6px; } .preview-caption { font-size: 8px; } .cover-stack { height: 290px; } .studio-art .sample-cover { max-height: 265px; } }
 @media (max-width: 650px) { .project-links { gap: 4px 16px; } .source-link { font-size: 11px; } .project-scope { font-size: 10px; margin-top: 10px; max-width: 310px; } .repository-art { height: auto; min-height: 260px; padding: 18px 17px 28px; gap: 13px; } .browser-frame { width: 100%; transform: none; border-radius: 8px; } .preview-bar { height: 24px; font-size: 7px; } .preview-caption { font-size: 9px; } .teardown-art .browser-frame { transform: none; } .studio-art { height: 320px; padding: 13px 0 24px; } .cover-stack { width: 94%; height: 270px; } .studio-art .sample-cover { max-height: 250px; } .project-studio .preview-caption { margin-top: 3px; } }
 @media (max-width: 360px) { .repository-art { min-height: 230px; padding-inline: 12px; } .studio-art { height: 285px; } .cover-stack { height: 238px; } .studio-art .sample-cover { max-height: 220px; } .preview-caption { font-size: 8px; } }
+@media (max-width: 1100px) { .hero { grid-template-columns: minmax(0, 1fr) minmax(220px, 300px); } }
+@media (max-width: 900px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 28px; } .hero-illustration { max-width: 280px; justify-self: center; } }
+@media (max-width: 650px) { .hero { gap: 24px; padding-bottom: 44px; } .hero-illustration { max-width: 240px; } }
 @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
