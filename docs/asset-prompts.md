@@ -1,6 +1,19 @@
 # 视觉资产
 
-## 当前版本：`dist/assets/z-sculpture.png`
+## 当前版本：IconMoon 参考改版
+
+使用内置 imagegen 工具生成下列两张原创项目配图，保留 PNG 透明背景。对话界面由 HTML/CSS 构建，原站图片未使用。
+
+### `dist/assets/flow-icon.png`
+
+Use case: product-mockup. Asset type: transparent 3D app illustration for a friendly personal portfolio project card. A single cohesive sculptural app icon about connecting ideas into workflows: three chunky rounded turquoise and soft aqua blocks connected by a curving deep teal tubular path, one small warm yellow sphere at the end, suggesting input-process-output. Minimal playful tactile toy-like 3D product design, soft ceramic and rubber textures, beautifully beveled friendly edges, refined isometric three-quarter view, not a realistic machine. Larger main turquoise block in the center, smaller ivory and mint blocks behind and beside it. Soft studio lighting, natural subtle self-shading, crisply cut out. Centered isolated composition with all pieces fully visible and generous transparent margin. NO enclosing app icon square, no pedestal, no cast shadow on a ground plane, no text, no logo, no UI screenshot, no background, no photograph, no black metal, no neon, no gradients behind the objects. True transparent background PNG. This is an original abstract project illustration, do not imitate any known app icon.
+
+### `dist/assets/knowledge-icon.png`
+
+Use case: product-mockup. Asset type: transparent 3D app illustration for a friendly personal portfolio project card. A single cohesive still life for a personal knowledge system: a chunky small coral-orange open notebook with thick cream paper pages, two softly rounded pale apricot and ivory index cards emerging from behind, a tiny golden bookmark and a warm brown spherical connector. Minimal playful tactile toy-like 3D product design, soft ceramic and paper materials, refined isometric three-quarter camera angle, clean simplified shapes and gentle bevels. Notebook is the clear main subject, index cards subordinate and close to it; pages have a few subtle embossed lines, absolutely no readable text. Soft studio illumination and subtle natural self-shading, crisp cutout silhouette. Centered complete object with generous transparent margins, no cropping. NO app icon square, no pedestal, no ground shadow, no text, no logos, no UI screenshot, no background, no environmental photography, no black metal, no neon. True transparent background PNG. Original independent illustration, not a copy of any existing app icon.
+
+
+## 历史版本：`dist/assets/z-sculpture.png`
 
 使用内置 imagegen 工具生成，保留透明背景。作品区界面预览由 HTML、CSS、SVG 构建；下方三张旧版场景照片已不在页面加载。
 

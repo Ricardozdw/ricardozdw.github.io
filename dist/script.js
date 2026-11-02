@@ -81,7 +81,7 @@ function notify(message) {
   toastTimeout = setTimeout(() => toast.classList.remove('show'), 3200);
 }
 document.querySelector('.copy-link').addEventListener('click', async () => {
-  const url = new URL(window.location.href); url.hash = '';
+  const url = new URL(window.location.href); url.hash = ''; url.search = '';
   try {
     await navigator.clipboard.writeText(url.href);
     notify('网站链接已复制。');
@@ -90,31 +90,11 @@ document.querySelector('.copy-link').addEventListener('click', async () => {
   }
 });
 
-const timeFormatter = new Intl.DateTimeFormat('en-GB', {
-  timeZone: 'Asia/Shanghai', hour: '2-digit', minute: '2-digit', hour12: false,
-});
-function updateClock() {
-  const now = new Date();
-  const clock = document.querySelector('#local-time');
-  clock.textContent = timeFormatter.format(now);
-  clock.dateTime = now.toISOString();
-}
-updateClock();
-setInterval(updateClock, 10000);
-
 const siteHeader = document.querySelector('.site-header');
-const darkSections = [...document.querySelectorAll('section.dark')];
 let headerFrame;
-function updateHeaderTheme() {
+function updateHeader() {
   cancelAnimationFrame(headerFrame);
-  headerFrame = requestAnimationFrame(() => {
-    const edge = siteHeader.getBoundingClientRect().bottom;
-    siteHeader.classList.toggle('on-dark', darkSections.some(section => {
-      const rect = section.getBoundingClientRect();
-      return rect.top <= edge && rect.bottom > edge;
-    }));
-  });
+  headerFrame = requestAnimationFrame(() => siteHeader.classList.toggle('is-scrolled', window.scrollY > 36));
 }
-window.addEventListener('scroll', updateHeaderTheme, { passive: true });
-window.addEventListener('resize', updateHeaderTheme);
-updateHeaderTheme();
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
