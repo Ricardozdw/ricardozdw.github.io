@@ -1,10 +1,10 @@
 # 张达玮的个人网站
 
-简约极客风格，原生 HTML、CSS、JavaScript，无需安装依赖。
+遵循用户提供的 DESIGN.md：白底黑字、统一 14px 字号、全宽摄影、无圆角与阴影的画廊式作品集。原生 HTML、CSS、JavaScript，无需安装依赖。
 
-**访问网站：[ricardozdw-dotcom.github.io](https://ricardozdw-dotcom.github.io/)**
+**访问网站：[ricardozdw.github.io](https://ricardozdw.github.io/)**
 
-源码仓库：[ricardozdw-dotcom/ricardozdw-dotcom.github.io](https://github.com/ricardozdw-dotcom/ricardozdw-dotcom.github.io)。GitHub Pages 网站和该仓库均公开可见。
+源码仓库：[Ricardozdw/ricardozdw.github.io](https://github.com/Ricardozdw/ricardozdw.github.io)。GitHub Pages 网站和该仓库均公开可见。
 
 ## 发布更新
 
@@ -27,9 +27,11 @@ GitHub Actions 会自动发布 `dist/`。可在仓库的 Actions 页面查看部
 ## 更新内容
 
 - `dist/profile.js`：姓名、职业、简介、关于我、邮箱。填入邮箱后自动显示邮件联系按钮。
-- `dist/index.html`：项目卡片与页面结构。
+- `dist/index.html`：全宽项目展示与页面结构。
 - `dist/script.js`：概念项目详情与交互。
 - `dist/style.css`：色彩、排版、响应式布局。
+- `dist/assets/`：AI 生成的概念场景照片，已转换为 JPEG 以减小加载体积。
+- `docs/asset-prompts.md`：场景图的生成方式与完整提示词。
 
 作品区当前是明确标注的概念展示，不代表真实项目履历。发布个人作品前，请替换相应卡片和详情。
 

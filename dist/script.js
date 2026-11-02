@@ -1,5 +1,5 @@
 const profile = window.PROFILE || {};
-for (const [key, selector] of Object.entries({name:'[data-name]',role:'[data-role]',intro:'[data-intro]',about:'[data-about]'})) {
+for (const [key, selector] of Object.entries({ name: '[data-name]', role: '[data-role]', intro: '[data-intro]', about: '[data-about]' })) {
   if (profile[key]) document.querySelectorAll(selector).forEach(el => el.textContent = profile[key]);
 }
 if (profile.name && profile.role) document.title = `${profile.name} — ${profile.role}`;
@@ -7,22 +7,8 @@ if (profile.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email)) {
   const email = document.querySelector('.email-link');
   email.href = `mailto:${encodeURIComponent(profile.email)}`;
   email.hidden = false;
-  document.querySelector('.contact-pending').hidden = true;
 }
 document.querySelector('#year').textContent = new Date().getFullYear();
-
-document.querySelectorAll('.filter').forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('.filter').forEach(item => {
-      const active = item === button;
-      item.classList.toggle('active', active);
-      item.setAttribute('aria-pressed', String(active));
-    });
-    document.querySelectorAll('.project').forEach(project => {
-      project.hidden = button.dataset.filter !== 'all' && project.dataset.category !== button.dataset.filter;
-    });
-  });
-});
 
 const explorations = {
   workflow: {
@@ -41,9 +27,26 @@ const explorations = {
     details:[['想解决什么','碎片信息容易越积越多，却不一定能在需要时被找到。这个概念关注从收集到理解、连接和输出的完整过程。'],['如何展开','保留原始来源，以问题组织笔记，让相关概念相互连接。AI 可以辅助整理与检索，关键结论仍回到来源核实。'],['如何验证','用真实的问题测试检索和复用，观察是否能找到来源、解释概念关系，并形成可用的思考产出。']]
   }
 };
-const dialog = document.querySelector('#project-dialog');
-document.querySelectorAll('[data-project]').forEach(button => button.addEventListener('click', () => {
-  const item = explorations[button.dataset.project];
+
+const notes = {
+  problem: {
+    category: '思考片段 / 关于产品', title: '先找到值得解决的问题',
+    description: '能力在变化，问题依然需要被认真理解。',
+    details: [['从场景开始', '用户在什么时刻遇到障碍？现在用什么方式完成任务？解决这个问题，对他们有什么实际意义？这些答案应该先于功能列表。'], ['给假设设立标准', '把模糊的期待写成可观察的行为。先确定什么样的结果说明产品有用，再选择模型、交互与实现方式。']]
+  },
+  prototype: {
+    category: '思考片段 / 关于验证', title: '把想法放进真实的场景',
+    description: '原型的价值，是让不确定的事情变得可以讨论、可以验证。',
+    details: [['让反馈具体', '一个能完成核心任务的简单原型，比抽象讨论更容易暴露理解偏差。观察用户如何开始、在哪停下，以及怎样修正错误。'], ['缩小验证范围', '每次只验证一个关键假设，让结果能够解释下一步该做什么。']]
+  },
+  experience: {
+    category: '思考片段 / 关于体验', title: '让技术安静地发挥作用',
+    description: '好的 AI 体验，需要让人理解、判断，也能随时接管。',
+    details: [['建立清晰预期', '让用户知道系统正在做什么、需要什么，以及结果适用于什么范围。'], ['保留人的控制', '重要的内容可以核对，关键的行动可以确认，错误的结果可以修改。能力最终要服务于人的目标。']]
+  }
+};
+const dialog = document.querySelector('#detail-dialog');
+function openDetail(item, isProject) {
   document.querySelector('#dialog-category').textContent = item.category;
   document.querySelector('#dialog-title').textContent = item.title;
   document.querySelector('#dialog-description').textContent = item.description;
@@ -54,19 +57,24 @@ document.querySelectorAll('[data-project]').forEach(button => button.addEventLis
     const p = document.createElement('p'); p.textContent = text;
     details.append(h3, p);
   });
+  const disclaimer = document.querySelector('#dialog-disclaimer');
+  disclaimer.hidden = !isProject;
+  disclaimer.textContent = isProject ? '概念展示，非实际交付项目或个人履历。场景配图由 AI 生成。' : '';
   dialog.showModal();
   dialog.scrollTop = 0;
-}));
+}
+document.querySelectorAll('[data-project]').forEach(button => button.addEventListener('click', () => openDetail(explorations[button.dataset.project], true)));
+document.querySelectorAll('[data-note]').forEach(button => button.addEventListener('click', () => openDetail(notes[button.dataset.note], false)));
 document.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => {
   const rect = dialog.getBoundingClientRect();
   if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
 });
-
 let toastTimeout;
 function notify(message) {
   const toast = document.querySelector('.toast');
-  toast.textContent = message; toast.classList.add('show');
+  toast.textContent = message;
+  toast.classList.add('show');
   clearTimeout(toastTimeout);
   toastTimeout = setTimeout(() => toast.classList.remove('show'), 3200);
 }
@@ -74,8 +82,8 @@ document.querySelector('.copy-link').addEventListener('click', async () => {
   const url = new URL(window.location.href); url.hash = '';
   try {
     await navigator.clipboard.writeText(url.href);
-    notify('链接已复制，期待下一次交流。');
+    notify('网站链接已复制。');
   } catch {
-    notify('暂时无法复制，请从浏览器地址栏复制链接。');
+    notify('请从浏览器地址栏复制网站链接。');
   }
 });

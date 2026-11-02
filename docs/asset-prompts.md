@@ -1,0 +1,16 @@
+# 场景配图
+
+使用内置 imagegen 工具生成；照片用于概念展示，不代表已交付的产品或真实个人工作环境。原图保留在生成工具的默认目录，网站采用经 sips 转换的 JPEG 版本。
+
+## `dist/assets/workspace.jpg`
+
+Use case: photorealistic-natural. Asset type: full-bleed editorial portfolio photograph, landscape 3:2, high resolution. Primary request: quiet, precise architectural product photography of an unbranded open silver laptop on a pale white desk in a bright minimal design studio, laptop screen shows a restrained white workspace interface with small neutral grey panels and a tiny black node workflow diagram, no readable words necessary. Camera is just above tabletop at a natural three-quarter angle, laptop large in middle-right, entire laptop visible, clean white empty space to the left. Thin black cable makes a natural curve across desk, soft window illumination, paper white and subtle neutral grays, near monochrome natural photography. Clean physical materials, fine aluminum texture, realistic screen reflections. Gallery quality photographed still life, calm and understated. No people, no logos, no overlaid typography, no graphics around the photograph, no neon, no saturated colors, no decorative plants, no sci-fi, no gradients applied to photograph, no mockup border. Output a single complete photograph.
+
+## `dist/assets/interface.jpg`
+
+Use case: photorealistic-natural. Asset type: full-bleed editorial portfolio photograph, landscape 3:2, high resolution. Primary request: intimate editorial close-up of a person's hand naturally using a thin unbranded black tablet on a pale grey desk, tablet screen has a beautifully minimal white AI conversation interface, small grey text lines and a black rectangular response panel, no legible text required. Composition is a candid overhead diagonal crop, tablet angled naturally, hand enters at lower right, tactile pale paper notebook partly visible at left edge. All physical objects and screen use only neutral black white and gray. Soft diffused daylight, realistic subtle glass reflections, subtle skin texture photographed naturally in neutral black and white, gallery portfolio quality. No logos, no text overlay, no illustration, no neon, no decorative borders, no fake floating UI, no rounded card frame around the photograph. Output a single photograph.
+
+## `dist/assets/notes.jpg`
+
+Use case: photorealistic-natural. Asset type: full-bleed editorial portfolio photograph, landscape 3:2, high resolution. Primary request: precise art-directed natural overhead photograph of a personal knowledge research desk. A large open off-white notebook with tiny black pen handwritten sketches, short unidentifiable notes and a small network of connected ideas, beside a few loosely laid rectangular paper index cards and a single fine black pen, a small corner of a silver laptop at upper right. Arrange the notebook slightly diagonal in the lower left half with generous pale grey desktop space surrounding it. Beautiful restrained editorial composition, neutral black white and gray materials only, tactile paper grain, soft natural daylight, realistic physical photograph with gentle natural shadows. No readable brand names, no overlaid words, no illustrations outside the paper, no grids of UI cards, no neon, no plants, no ornaments. Output a single complete photograph.
+
