@@ -38,7 +38,7 @@ jobs:
           index = Path('dist/index.html')
           html = index.read_text(encoding='utf-8')
           revision = os.environ['SITE_REVISION']
-          for asset in ('./style.css', './script.js', './profile.js', './favicon.svg'):
+          for asset in ('./style.css', './script.js', './profile.js', './articles.js', './favicon.svg'):
               html = html.replace('"' + asset + '"', '"' + asset + '?v=' + revision + '"')
           index.write_text(html, encoding='utf-8')
           PY
